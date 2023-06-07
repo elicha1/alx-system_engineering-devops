@@ -1,2 +1,4 @@
 #!/bin/bash
-ls -l "$(pwd)"
+for entry in "$(pwd)"/*; do
+    echo "$(basename "$entry")"
+done
