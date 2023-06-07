@@ -1,4 +1,2 @@
 #!/bin/bash
-
-current_dir=$(pwd)
-echo "/root/$current_dir"
+echo "/root/$(pwd)"
