@@ -1,4 +1,2 @@
 #!/bin/bash
-for entry in "$(pwd)"/*; do
-    echo "$(basename "$entry")"
-done
+ls -1
