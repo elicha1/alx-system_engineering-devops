@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
 #display pid of a bash
 
-pgrep "bash"
+current_pid=$$
+bash_processes=$(pgrep -f bash)
+
+for pid in $bash_processes; do
+    if [ $pid -ne $current_pid ]; then
+        process_name=$(ps -o comm= -p $pid)
+        echo "$pid $process_name"
+    fi
+done
